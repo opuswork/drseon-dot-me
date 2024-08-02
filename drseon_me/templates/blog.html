@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+  
+  <!-- blog section -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <section class="blog_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Blog
+        </h2>
+        <img src="{% static 'images/plug.png' %}" alt="">
+      </div>
+      <div class="row">
+
+        {% for post in posts %}
+        <div class="col-md-6">
+          <div class="box">
+            <div class="img-box">
+              {% if post.title_image %}
+                  <center><img src="{{ post.title_image.url }}" alt=""></center>
+              {% endif %}
+            </div>
+            <div class="detail-box">
+              <h5>
+                <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>
+              </h5>
+              <h6>
+              Posted at:  {{ post.created }}
+              </h6>
+              <h6>
+              Posted by:  {{ post.author }}
+              </h6>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+
+      </div>
+    </div>
+    <!--<br/><br/><br/>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="detail-box">
+            <div class="heading_container">
+              <div class="d-flex">
+                <button>Load More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>-->
+
+</section>
+<!-- end blog section -->
+
+{% endblock %}

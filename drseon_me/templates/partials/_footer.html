@@ -1,0 +1,79 @@
+{% load static %}
+
+<!-- info section -->
+<section class="info_section layout_padding">
+    <div class="container">
+        <div class="info_contact">
+            <div class="row">
+
+                <div class="col-md-4">
+                    <img src="{% static 'images/location-white.png' %}" alt="">
+                    <span>
+                        Studio & Lab: Springfield, VA
+                    </span>
+                </div>
+
+                <div class="col-md-4">
+                    <img src="{% static 'images/telephone-white.png' %}" alt="">
+                    <span>
+                        Call : +1)803-USA-SC07
+                    </span>
+                </div>
+
+                <div class="col-md-4">
+                    <img src="{% static 'images/envelope-white.png' %}" alt="">
+                    <span>
+                        tseon-at-opuscore-net
+                    </span>
+                </div>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-lg-9">
+                <div class="info_form">
+                    <form action="{% url 'subscribe' %}" method="post">
+                    {% csrf_token %}                        
+                    <input type="text" name="email" placeholder="Enter your email" required>
+                    <button type="submit">
+                        subscribe
+                    </button>
+                    </form>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-3">
+                <div class="info_social">
+                    <div>
+                        <img src="{% static 'images/fb.png' %}" alt="">
+                    </div>
+                    <div>
+                        <img src="{% static 'images/twitter.png' %}" alt="">
+                    </div>
+                    <div>
+                        <img src="{% static 'images/linkedin.png' %}" alt="">
+                    </div>
+                    <div>
+                        <img src="{% static 'images/instagram.png' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- end row -->
+    </div>
+    <!-- end container -->
+</section>
+<!-- end info section -->
+
+<!-- footer section -->
+<footer class="container-fluid footer_section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7 col-md-9 mx-auto">
+            <p>
+                &copy; {% now 'Y' %} Dr.Seon, All Rights Reserved, managed by Opuscore Releases Group.
+            </p>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- footer section -->

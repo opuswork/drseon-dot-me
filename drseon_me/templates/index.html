@@ -1,0 +1,148 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+    <!-- slider section -->
+    <section class=" slider_section ">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 ">
+              <div class="detail_box">
+                <h1>
+                  IT Professional <br>
+                  Classical Musician <br>
+                  Educator
+                </h1>
+                <p>
+                Even though the road I'm taking is rough and long, I wish I could go with you. When the morning sun shines on our path, I'll tell you that I'm happy. I look around, but the best thing is with you.
+                </p>
+                <a href="{% url 'contact' %}?menu=contact" class="">
+                  Contact
+                </a>
+              </div>
+            </div>
+            <div class="col-lg-5 col-md-6 offset-lg-1">
+              <div class="img_content">
+                <br/>
+                <div class="img_container">
+                  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                       
+                      <div class="carousel-item active">
+                        <div class="img-box">
+                          <img src="{% static 'images/drseon-portrait.png' %}" alt="">
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="img-box">
+                          <img src="{% static 'images/workspace.jpg' %}" alt="">
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <div class="img-box">
+                          <img src="{% static 'images/studio.jpg' %}" alt="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                  <span class="sr-only">Next</span>
+                </a>
+              </div>
+  
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end slider section -->
+    </div>
+  
+  
+    <!-- service section -->
+    <section class="service_section layout_padding">
+      <div class="container">
+        <div class="heading_container">
+          <h2>
+            Dr.Seon's Research Interests
+          </h2>
+          <img src="{% static 'images/plug.png' %}" alt="">
+        </div>
+  
+        <div class="service_container">
+  
+  
+  
+          <div class="box">
+            <div class="img-box">
+              <img src="{% static 'images/s1.png' %}" class="img1" alt="">
+            </div>
+            <div class="detail-box">
+              <h5>
+                Software Development/Computer Science
+              </h5>
+            </div>
+          </div>
+  
+          <div class="box">
+            <div class="img-box">
+              <img src="{% static 'images/s2.png' %}" class="img1" alt="">
+            </div>
+            <div class="detail-box">
+              <h5>
+                Singing!
+              </h5>
+            </div>
+          </div>
+  
+          <div class="box">
+            <div class="img-box">
+              <img src="{% static 'images/s3.png' %}" class="img1" alt="">
+            </div>
+            <div class="detail-box">
+              <h5>
+                Algorithmic Composition
+              </h5>
+            </div>
+          </div>
+  
+          <div class="box ">
+            <div class="img-box">
+              <img src="{% static 'images/s4.png' %} " class="img1" alt="">
+            </div>
+            <div class="detail-box">
+              <h5>
+                AI in Music Theory
+              </h5>
+            </div>
+          </div>
+  
+          <div class="box ">
+            <div class="img-box">
+              <img src="{% static 'images/s4.png' %}" class="img1" alt="">
+            </div>
+            <div class="detail-box">
+              <h5>
+                Collaboration
+              </h5>
+            </div>
+          </div>
+  
+        </div>
+        <!--<div class="btn-box">
+          <a href="">
+            Read More
+          </a>
+        </div>
+      </div>-->
+  
+    </section>
+    <!-- end service section -->
+  
+
+{% endblock %}

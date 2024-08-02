@@ -1,0 +1,64 @@
+<!-- home/templates/contact.html -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+  <section class="contact_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>Contact Dr. Seon</h2>
+        <img src="{% static 'images/plug.png' %}" alt="">
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <form method="post" action="">
+            {% csrf_token %}
+            {% if messages %}
+              <ul class="messages">
+                {% for message in messages %}
+                  <li class="{{ message.tags }}">{{ message }}</li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+            <div>
+              <input type="text" name="sender_name" placeholder="Name" value="{{ form.sender_name.value|default_if_none:'' }}" required />
+              {% for error in form.sender_name.errors %}
+                <div class="error">{{ error }}</div>
+              {% endfor %}
+            </div>
+            <div>
+              <input type="email" name="sender_email" placeholder="Email" value="{{ form.sender_email.value|default_if_none:'' }}" required />
+              {% for error in form.sender_email.errors %}
+                <div class="error">{{ error }}</div>
+              {% endfor %}
+            </div>
+            <div>
+              <input type="text" name="sender_phone" placeholder="Phone Number" value="{{ form.sender_phone.value|default_if_none:'' }}" required />
+              {% for error in form.sender_phone.errors %}
+                <div class="error">{{ error }}</div>
+              {% endfor %}
+            </div>
+            <div>
+              <input type="text"name="sender_message" class="message-box" placeholder="Message" required />{{ form.sender_message.value|default_if_none:'' }}
+              {% for error in form.sender_message.errors %}
+                <div class="error">{{ error }}</div>
+              {% endfor %}
+            </div>
+            <div class="d-flex">
+              <button type="submit">SEND</button>
+            </div>
+          </form>
+        </div>
+        <div class="col-md-6">
+          <div class="map_container">
+            <div class="map-responsive">
+              <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=4400+Broad+St+Lot+67+Sumter+SC+29154" width="600" height="300" frameborder="0" style="border:0; width: 100%; height:100%" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+{% endblock %}

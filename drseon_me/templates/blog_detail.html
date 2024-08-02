@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+  
+  <!-- blog section -->
+
+  <section class="blog_section layout_padding">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          Blog
+        </h2>
+        <img src="{% static 'images/plug.png' %}" alt="">
+      </div>
+      <div class="row">
+
+        <div class="col-md-12">
+          <div class="box">
+            <div class="img-box">
+              {% if post.title_image %}
+                  <center><img src="{{ post.title_image.url }}" alt=""></center>
+              {% endif %}
+            </div>
+            <div class="detail-box">
+                <center><h1 class="entry-title">
+                    {{ post.title }}
+                </h1></center>
+              <h6>
+              Posted at:  {{ post.created }}
+              </h6>
+              <h6>
+              Posted by:  {{ post.author }}
+              </h6>
+              <p>
+                <div class="content-wrap content-660 center-relative">
+                    {% autoescape off %}
+                    {{ post.body|safe }}
+                    {% endautoescape %}
+                </div>
+              </p>  
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+      <div>
+        <button class="btn-block"><a href="{% url 'blog' %}?menu=blog">Back to Blog main</a></button>
+      </div>
+    </div>
+                   
+
+  </section>
+
+  <!-- end blog section -->
+
+  {% endblock %}

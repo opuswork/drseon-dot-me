@@ -1,0 +1,104 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<!-- service section -->
+<section class="service_section layout_padding">
+    <div class="container">
+
+                    <div class="heading_container">
+                        <h2>
+                        Dr. Seon's Research Areas
+                        </h2>
+                        <img src="{% static 'images/plug.png' %}" alt="">
+                    </div>
+                    
+                    <div class="service_container">
+
+                        <div class="box">
+                            <div class="img-box">
+                                <img src="{% static 'images/s1.png' %}" class="img1" alt="">
+                            </div>
+                            <div class="detail-box">
+                                <h5>
+                                Full Stack Development/WebApp DevOps
+                                </h5>
+                                <p>
+                                One of my major work areas is full-stack-development with Python, Django and other front-end technologies.
+                                I have my own web-app which is being maintained by AI.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <div class="img-box">
+                                <img src="{% static 'images/s2.png' %}" class="img1" alt="">
+                            </div>
+                            <div class="detail-box">
+                                <h5>
+                                Voice Studio
+                                </h5>
+                                <p>
+                                Dr. Seon has his voice studio which is operated by extraordinary musicians. In his voice studio, you can learn and study about singing with optimized curriculum equivalent to grad level.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="box">
+                            <div class="img-box">
+                                <img src="{% static 'images/s3.png' %}" class="img1" alt="">
+                            </div>
+                            <div class="detail-box">
+                                <h5>
+                                Algorithmic Composition
+                                </h5>
+                                <p>
+                                Currently AI can compose closely with classical music by advanced technology of deep learning.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="box ">
+                            <div class="img-box">
+                                <img src="{% static 'images/s4.png' %}" class="img1" alt="">
+                            </div>
+                            <div class="detail-box">
+                                <h5>
+                                AI Music Theory
+                                </h5>
+                                <p>
+                                Music theory is something kind of an area which is possible capable in both machine learning and deep learning to improve to an expandable technology.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="box ">
+                            <div class="img-box">
+                                <img src="{% static 'images/s4.png' %}" class="img1" alt="">
+                            </div>
+                            <div class="detail-box">
+                                <h5>
+                                Conductor
+                                </h5>
+                                <p>
+                                Dr. Seon is a music director who leads laptop orchestra, Bach Solisten America, and The PCME(Power Chamber Music Ensemble).
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!--<div class="btn-box">
+                        <a href="">
+                        Read More
+                        </a>
+                    </div>-->
+
+    </div>
+    <!-- end container -->
+</section>
+<!-- end service section -->
+
+{% endblock %}

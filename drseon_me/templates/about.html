@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+<!-- about section -->
+<section class="about_section layout_padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="detail-box">
+                    <div class="heading_container">
+                    <h2>
+                        Who is Dr.Seon?
+                    </h2>
+                    <img src="{% static 'images/plug.png' %}" alt="">
+                    </div>
+                    <ul>
+                        <li>Full-Stack Developer, Computer Scientist;</li>
+                            <ul>
+                                <li>Web Development Engineer</li>
+                                <li>PHP Developer,</li>
+                                <li>Python(Automation) Engineer,</li>
+                                <li>Django Developer</li>
+                            </ul>
+                    </ul>
+
+                    <ul>
+                        <li>In Music; </li>
+                            <ul>
+                                <li>Operatic Tenor(Lirico Tenore); </li>
+                                <li>Chamber Music Specialist, </li>
+                                <li>Choir Director,</li>
+                                <li>Computer Music Scientist & Engineer</li>
+                            </ul>
+                    </ul>
+
+                    <ul>
+                        <li>Education:</li>
+                            <ul>
+                                <li>BS in Computer Science</li>
+                                <li>Doctor of Music in Voice & Opera</li>
+                            </ul>
+                    </ul>
+
+                    <ul>
+                        <li>Licenses/Certificates:</li>
+                            <ul>
+                                <li>Google IT Automation with Python</li>
+                                <li>Google CyberSecurity Professional Certificate</li>
+                                <li>META Full Stack Developer</li>
+                            </ul>
+                    </ul>
+                    <a href="">
+                    CV - Dr. Seon
+                    </a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="img_container">
+                    <div class="img-box b1">
+                    <img src="{% static 'images/workspace.jpg' %}" alt="" />
+                    </div>
+                    <div class="img-box b2">
+                    <img src="{% static 'images/drseon-portrait.png' %}" alt="" />
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- end about section -->
+
+<!-- end contact section -->
+{% endblock %}
